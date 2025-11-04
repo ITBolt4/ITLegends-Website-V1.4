@@ -1,10 +1,45 @@
 import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="w-full">
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Shield className={`w-8 h-8 transition-colors ${isScrolled ? 'text-blue-400' : 'text-white'}`} />
+            <span className={`font-bold text-lg transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT Legends</span>
+          </div>
+
+          <div className="hidden md:flex items-center gap-8">
+            <button onClick={() => scrollToSection('home')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Home</button>
+            <button onClick={() => scrollToSection('about')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>About</button>
+            <button onClick={() => scrollToSection('services')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Services</button>
+            <button onClick={() => scrollToSection('why-us')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Why Us</button>
+            <button onClick={() => scrollToSection('contact')} className={`font-medium transition-colors hover:text-red-500 ${isScrolled ? 'text-gray-300' : 'text-white/90'}`}>Contact</button>
+          </div>
+        </div>
+      </nav>
+
+      <div id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
@@ -47,7 +82,7 @@ function App() {
         <div className="h-px bg-gradient-to-r from-red-500 via-blue-500 to-red-500"></div>
       </div>
 
-      <div className="w-full bg-gradient-to-b from-gray-100 to-white py-20 px-6">
+      <div id="about" className="w-full bg-gradient-to-b from-gray-100 to-white py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
             Who We Are
@@ -63,7 +98,7 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full bg-white py-20 px-6">
+      <div id="services" className="w-full bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16">
             Our Services
@@ -104,7 +139,7 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full bg-gradient-to-b from-gray-900 to-gray-800 py-20 px-6">
+      <div id="why-us" className="w-full bg-gradient-to-b from-gray-900 to-gray-800 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
             Why Partner With Us
@@ -133,7 +168,7 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full bg-gradient-to-b from-white to-gray-50 py-20 px-6">
+      <div id="contact" className="w-full bg-gradient-to-b from-white to-gray-50 py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
             Let's Build Something Legendary
@@ -187,6 +222,14 @@ function App() {
           <ContactForm />
         </div>
       </div>
+
+      <footer className="w-full bg-gray-900 py-8 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-400 text-sm md:text-base">
+            © 2025 IT Legends — Providing You with LEGENDARY Services.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

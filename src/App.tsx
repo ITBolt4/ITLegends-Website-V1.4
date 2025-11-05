@@ -26,15 +26,15 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Shield className={`w-8 h-8 transition-colors ${isScrolled ? 'text-it-blue' : 'text-white'}`} />
-            <span className={`font-orbitron font-bold text-lg tracking-wider transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT LEGENDS</span>
+            <span className={`font-montserrat font-bold text-lg tracking-widest uppercase transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT LEGENDS</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('home')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Home</button>
-            <button onClick={() => scrollToSection('about')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>About</button>
-            <button onClick={() => scrollToSection('services')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Services</button>
-            <button onClick={() => scrollToSection('why-us')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Why Us</button>
-            <button onClick={() => scrollToSection('contact')} className={`font-poppins font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Contact</button>
+            <button onClick={() => scrollToSection('home')} className={`font-montserrat font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Home</button>
+            <button onClick={() => scrollToSection('about')} className={`font-montserrat font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>About</button>
+            <button onClick={() => scrollToSection('services')} className={`font-montserrat font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Services</button>
+            <button onClick={() => scrollToSection('why-us')} className={`font-montserrat font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Why Us</button>
+            <button onClick={() => scrollToSection('contact')} className={`font-montserrat font-medium transition-colors hover:text-it-red ${isScrolled ? 'text-it-silver' : 'text-white/90'}`}>Contact</button>
           </div>
         </div>
       </nav>
@@ -53,7 +53,7 @@ function App() {
             <Shield className="w-16 h-16 text-it-blue drop-shadow-[0_0_25px_rgba(0,123,255,0.6)]" />
           </div>
 
-          <h1 className="font-orbitron text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wider">
+          <h1 className="font-montserrat text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight uppercase">
             Providing You with{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-it-blue via-it-red to-it-blue drop-shadow-[0_0_40px_rgba(199,0,57,0.6)]">
               LEGENDARY
@@ -62,17 +62,17 @@ function App() {
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="group px-8 py-4 bg-it-blue hover:bg-it-blue/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(0,123,255,0.4)] hover:shadow-[0_0_30px_rgba(0,123,255,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <button className="group px-8 py-4 bg-it-blue hover:bg-it-blue/80 text-white font-montserrat font-semibold rounded-xl shadow-[0_0_20px_rgba(0,123,255,0.4)] hover:shadow-[0_0_30px_rgba(0,123,255,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
               Get Support
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="group px-8 py-4 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <button className="group px-8 py-4 bg-it-red hover:bg-it-red/80 text-white font-montserrat font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
               Our Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
-          <p className="font-poppins text-it-silver text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="font-montserrat text-it-silver text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
             Empowering South African businesses with reliable IT solutions
           </p>
         </div>
@@ -84,15 +84,15 @@ function App() {
 
       <div id="about" className="w-full bg-gradient-to-b from-it-silver/20 to-white py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-it-dark mb-12 tracking-wider">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-it-dark mb-12 tracking-tight uppercase">
             WHO WE ARE
           </h2>
 
-          <p className="font-poppins text-gray-800 text-lg md:text-xl leading-relaxed mb-6 max-w-3xl mx-auto">
+          <p className="font-montserrat text-gray-800 text-lg md:text-xl leading-relaxed mb-6 max-w-3xl mx-auto font-medium">
             Our mission is to protect, maintain, and enhance your technology infrastructure so you can focus on what truly matters — your business growth.
           </p>
 
-          <p className="font-poppins text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="font-montserrat text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-medium">
             We deliver innovative, reliable, and efficient IT support for businesses of all sizes.
           </p>
         </div>
@@ -100,7 +100,7 @@ function App() {
 
       <div id="services" className="w-full bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-it-dark text-center mb-16 tracking-wider">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-it-dark text-center mb-16 tracking-tight uppercase">
             OUR SERVICES
           </h2>
 
@@ -141,7 +141,7 @@ function App() {
 
       <div id="why-us" className="w-full bg-gradient-to-b from-it-dark to-gray-900 py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-wider">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight uppercase">
             WHY PARTNER WITH US
           </h2>
 
@@ -170,21 +170,21 @@ function App() {
 
       <div id="contact" className="w-full bg-gradient-to-b from-white to-it-silver/30 py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-orbitron text-4xl md:text-5xl font-bold text-it-dark text-center mb-4 tracking-wider">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-it-dark text-center mb-4 tracking-tight uppercase">
             LET'S BUILD SOMETHING LEGENDARY
           </h2>
 
           <div className="flex flex-col items-center gap-6 mb-12">
             <div className="flex flex-wrap justify-center gap-6 text-gray-700">
-              <a href="tel:+27846348144" className="font-poppins flex items-center gap-2 hover:text-it-red transition-colors">
+              <a href="tel:+27846348144" className="font-montserrat font-medium flex items-center gap-2 hover:text-it-red transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>(+27) 84 634 8144</span>
               </a>
-              <a href="mailto:info@itlegends.co.za" className="font-poppins flex items-center gap-2 hover:text-it-red transition-colors">
+              <a href="mailto:info@itlegends.co.za" className="font-montserrat font-medium flex items-center gap-2 hover:text-it-red transition-colors">
                 <Mail className="w-5 h-5" />
                 <span>info@itlegends.co.za</span>
               </a>
-              <a href="https://www.itlegends.co.za" target="_blank" rel="noopener noreferrer" className="font-poppins flex items-center gap-2 hover:text-it-red transition-colors">
+              <a href="https://www.itlegends.co.za" target="_blank" rel="noopener noreferrer" className="font-montserrat font-medium flex items-center gap-2 hover:text-it-red transition-colors">
                 <Globe className="w-5 h-5" />
                 <span>www.itlegends.co.za</span>
               </a>
@@ -195,7 +195,7 @@ function App() {
                 href="https://wa.me/27846348144"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-montserrat font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 <MessageSquare className="w-5 h-5" />
                 WhatsApp
@@ -204,7 +204,7 @@ function App() {
                 href="https://facebook.com/itlegends"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-montserrat font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105"
               >
                 Facebook
               </a>
@@ -212,7 +212,7 @@ function App() {
                 href="https://instagram.com/itlegends"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-3 bg-it-red hover:bg-it-red/80 text-white font-montserrat font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105"
               >
                 Instagram
               </a>
@@ -225,7 +225,7 @@ function App() {
 
       <footer className="w-full bg-it-dark py-8 px-6 border-t border-it-blue/30">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="font-poppins text-it-silver text-sm md:text-base">
+          <p className="font-montserrat text-it-silver text-sm md:text-base font-medium">
             © 2025 IT Legends — Providing You with LEGENDARY Services.
           </p>
         </div>
@@ -249,11 +249,11 @@ function ServiceCard({ icon, title, description }: { icon: React.ReactNode; titl
           {icon}
         </div>
 
-        <h3 className="font-orbitron text-xl font-bold text-it-dark mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-it-blue group-hover:to-it-red transition-all duration-300 tracking-wide">
+        <h3 className="font-montserrat text-xl font-bold text-it-dark mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-it-blue group-hover:to-it-red transition-all duration-300 tracking-tight uppercase">
           {title}
         </h3>
 
-        <p className="font-poppins text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed">
+        <p className="font-montserrat text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed font-medium">
           {description}
         </p>
       </div>
@@ -275,11 +275,11 @@ function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNod
           {icon}
         </div>
 
-        <h3 className="font-orbitron text-2xl font-bold text-white mb-4 tracking-wide">
+        <h3 className="font-montserrat text-2xl font-bold text-white mb-4 tracking-tight uppercase">
           {title}
         </h3>
 
-        <p className="font-poppins text-it-silver leading-relaxed text-base">
+        <p className="font-montserrat text-it-silver leading-relaxed text-base font-medium">
           {description}
         </p>
       </div>
@@ -321,7 +321,7 @@ function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-it-blue/20">
       <div className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-poppins font-semibold text-it-dark mb-2">
+          <label htmlFor="name" className="block text-sm font-montserrat font-semibold text-it-dark mb-2">
             Name
           </label>
           <input
@@ -331,13 +331,13 @@ function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 font-poppins"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 font-montserrat"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-poppins font-semibold text-it-dark mb-2">
+          <label htmlFor="email" className="block text-sm font-montserrat font-semibold text-it-dark mb-2">
             Email
           </label>
           <input
@@ -347,13 +347,13 @@ function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 font-poppins"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 font-montserrat"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-poppins font-semibold text-it-dark mb-2">
+          <label htmlFor="message" className="block text-sm font-montserrat font-semibold text-it-dark mb-2">
             Message
           </label>
           <textarea
@@ -363,7 +363,7 @@ function ContactForm() {
             onChange={handleChange}
             required
             rows={5}
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 resize-none font-poppins"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-it-red focus:border-transparent transition-all duration-200 resize-none font-montserrat"
             placeholder="Tell us about your IT needs..."
           />
         </div>
@@ -371,19 +371,19 @@ function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full px-8 py-4 bg-it-red hover:bg-it-red/80 text-white font-poppins font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full px-8 py-4 bg-it-red hover:bg-it-red/80 text-white font-montserrat font-semibold rounded-xl shadow-[0_0_20px_rgba(199,0,57,0.4)] hover:shadow-[0_0_30px_rgba(199,0,57,0.7)] transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
 
         {submitStatus === 'success' && (
-          <div className="text-center text-green-600 font-poppins font-semibold animate-fade-in">
+          <div className="text-center text-green-600 font-montserrat font-semibold animate-fade-in">
             Message sent successfully! We'll get back to you soon.
           </div>
         )}
 
         {submitStatus === 'error' && (
-          <div className="text-center text-it-red font-poppins font-semibold animate-fade-in">
+          <div className="text-center text-it-red font-montserrat font-semibold animate-fade-in">
             Something went wrong. Please try again.
           </div>
         )}

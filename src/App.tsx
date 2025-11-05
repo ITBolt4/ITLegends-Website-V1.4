@@ -100,9 +100,10 @@ function App() {
         </div>
       </div>
 
-      <div id="services" className="w-full bg-white py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-it-dark text-center mb-16 tracking-tight uppercase">
+      <div id="services" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-[#0033AA]/40"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight uppercase">
             OUR SERVICES
           </h2>
 
@@ -238,7 +239,7 @@ function App() {
 
 function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="group relative bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:shadow-[0_0_30px_rgba(199,0,57,0.3)] hover:border-it-red/50 overflow-hidden">
+    <div className="group relative bg-white/95 backdrop-blur border border-white/50 rounded-xl p-8 transition-all duration-300 shadow-lg hover:shadow-[0_20px_40px_rgba(199,0,57,0.4)] hover:border-it-red/80 overflow-hidden transform hover:-translate-y-1">
       <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-red/0 group-hover:from-it-blue/10 group-hover:to-it-red/10 transition-all duration-300"></div>
 
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

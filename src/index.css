@@ -72,6 +72,15 @@
   }
 }
 
+@keyframes dividerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
@@ -88,6 +97,10 @@
 
   .glow-hover:hover {
     animation: glow 1.5s infinite;
+  }
+
+  .divider-in-view {
+    animation: dividerFadeIn 0.8s ease-in forwards;
   }
 
   .section-transition {

@@ -1,9 +1,38 @@
 import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function GradientDivider() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-[120px] h-0.5 mx-auto mb-12 bg-gradient-to-r from-[#007BFF] to-[#C70039] opacity-60 rounded-full shadow-[0_0_12px_rgba(0,123,255,0.4)]"></div>
+    <div
+      ref={ref}
+      className={`w-[120px] h-0.5 mx-auto mb-12 bg-gradient-to-r from-[#007BFF] to-[#C70039] rounded-full shadow-[0_0_12px_rgba(0,123,255,0.4)] ${
+        isVisible ? 'divider-in-view' : 'opacity-0'
+      }`}
+    ></div>
   );
 }
 

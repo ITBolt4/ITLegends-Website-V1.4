@@ -1,6 +1,12 @@
 import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+function GradientDivider() {
+  return (
+    <div className="w-[120px] h-0.5 mx-auto mb-12 bg-gradient-to-r from-[#007BFF] to-[#C70039] opacity-60 rounded-full shadow-[0_0_12px_rgba(0,123,255,0.4)]"></div>
+  );
+}
+
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -89,8 +95,7 @@ function App() {
           <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
             WHO WE ARE
           </h2>
-
-          <div className="w-[120px] h-0.5 mx-auto mb-12 bg-gradient-to-r from-[#007BFF] to-[#C70039] opacity-60"></div>
+          <GradientDivider />
 
           <p className="font-montserrat text-white text-lg md:text-xl mb-6 max-w-3xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             Our mission is to protect, maintain, and enhance your technology infrastructure so you can focus on what truly matters — your business growth.
@@ -109,9 +114,12 @@ function App() {
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-it-blue/12 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-6 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
             OUR SERVICES
           </h2>
+          <div className="flex justify-center mb-16">
+            <GradientDivider />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard
@@ -156,9 +164,12 @@ function App() {
           <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-it-red/10 rounded-full blur-3xl"></div>
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-6 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
             WHY PARTNER WITH US
           </h2>
+          <div className="flex justify-center mb-16">
+            <GradientDivider />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
@@ -190,9 +201,12 @@ function App() {
           <div className="absolute bottom-0 right-1/2 w-96 h-96 bg-it-blue/12 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-4 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-6 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
             LET'S BUILD SOMETHING LEGENDARY
           </h2>
+          <div className="flex justify-center mb-16">
+            <GradientDivider />
+          </div>
 
           <div className="flex flex-col items-center gap-6 mb-12">
             <div className="flex flex-wrap justify-center gap-6 text-it-silver">

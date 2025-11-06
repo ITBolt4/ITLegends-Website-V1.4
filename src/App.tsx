@@ -115,7 +115,7 @@ function App() {
         </div>
       </div>
 
-      <MicroDivider fromColor="rgba(10, 10, 10, 0.7)" toColor="rgba(10, 10, 10, 0.6)" />
+      <MicroDivider fromColor="rgba(10, 10, 10, 0.85)" toColor="rgba(10, 10, 10, 1)" />
 
       <div id="about" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative section-fade" style={{backgroundImage: 'url(/src/img/about-bg.jpg)'}}>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-[#0A0A0A]/60 to-[#0A0A0A]/50"></div>

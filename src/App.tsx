@@ -105,7 +105,7 @@ function App() {
       </div>
 
       <div id="services" className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative section-fade" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-[#0033AA]/55"></div>
+        <div className="absolute inset-0 bg-[#0A0A0A]/70"></div>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/3 w-96 h-96 bg-it-red/12 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-it-blue/12 rounded-full blur-3xl animate-pulse delay-700"></div>
@@ -258,20 +258,20 @@ function App() {
 
 function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="group relative bg-white/96 backdrop-blur-sm border border-white/60 rounded-xl p-8 transition-all duration-300 shadow-lg hover:shadow-[0_20px_45px_rgba(199,0,57,0.5)] hover:border-it-red/90 overflow-hidden transform hover:-translate-y-1">
-      <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-red/0 group-hover:from-it-blue/15 group-hover:to-it-red/15 transition-all duration-300"></div>
+    <div className="group relative bg-white/98 backdrop-blur-sm border border-white/70 rounded-xl p-8 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,123,255,0.3)] hover:border-it-blue/60 overflow-hidden transform hover:-translate-y-1">
+      <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-blue/0 group-hover:from-it-blue/8 group-hover:to-it-blue/8 transition-all duration-300"></div>
 
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-it-blue to-it-red"></div>
-        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-it-red to-it-blue"></div>
+        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-it-blue/50 to-it-blue/20"></div>
+        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-it-blue/20 to-it-blue/50"></div>
       </div>
 
       <div className="relative z-10">
-        <div className="mb-6 inline-flex items-center justify-center p-3 bg-gradient-to-br from-it-blue/15 to-it-red/15 rounded-lg group-hover:shadow-[0_0_25px_rgba(199,0,57,0.5),0_0_15px_rgba(0,123,255,0.3)] transition-all duration-300 text-it-blue group-hover:text-it-red">
+        <div className="mb-6 inline-flex items-center justify-center p-3 bg-gradient-to-br from-it-blue/20 to-it-blue/10 rounded-lg group-hover:shadow-[0_0_20px_rgba(0,123,255,0.5)] transition-all duration-300 text-it-blue group-hover:text-it-blue drop-shadow-[0_0_10px_rgba(0,123,255,0.3)]">
           {icon}
         </div>
 
-        <h3 className="font-montserrat text-xl font-bold text-it-dark mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-it-blue group-hover:to-it-red transition-all duration-300 tracking-tight uppercase">
+        <h3 className="font-montserrat text-xl font-bold text-[#0A0A0A] mb-3 group-hover:text-it-blue transition-colors duration-300 tracking-tight uppercase">
           {title}
         </h3>
 

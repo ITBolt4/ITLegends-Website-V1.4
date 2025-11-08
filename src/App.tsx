@@ -62,14 +62,14 @@ function App() {
     <div className="w-full">
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-it-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 pl-4 md:pl-6">
+          <a href="/" className="flex items-center gap-3 pl-0">
             <img
               src={logoNavbar}
               alt="IT Legends Logo"
-              className="h-[36px] md:h-[48px] w-auto object-contain transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(0,123,255,0.25)]"
+              className="w-[150px] h-[36px] sm:w-[190px] sm:h-[46px] md:w-[230px] md:h-[56px] object-contain transition-all duration-300 hover:drop-shadow-[0_0_6px_rgba(0,123,255,0.25)]"
               style={{ filter: 'none', opacity: 1, mixBlendMode: 'normal' }}
             />
-            <span className={`font-montserrat font-bold text-lg tracking-widest uppercase transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>IT LEGENDS</span>
+            <span className={`font-montserrat font-bold text-lg tracking-widest uppercase transition-colors hidden sm:inline ${isScrolled ? 'text-white' : 'text-white'}`}>IT LEGENDS</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

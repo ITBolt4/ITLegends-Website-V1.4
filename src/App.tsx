@@ -2,6 +2,7 @@ import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, A
 import { useState, useEffect, useRef } from 'react';
 import MicroDivider from './components/MicroDivider';
 import logoNavbar from './img/logo-navbar.png';
+import logoHero from './img/logo-hero.png';
 
 function GradientDivider() {
   const [isVisible, setIsVisible] = useState(false);
@@ -91,8 +92,12 @@ function App() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <div className="mb-8 inline-flex items-center justify-center">
-            <Shield className="w-16 h-16 text-it-blue drop-shadow-[0_0_25px_rgba(0,123,255,0.6)]" />
+          <div className="mb-8 flex justify-center">
+            <img
+              src={logoHero}
+              alt="IT Legends Hero Logo"
+              className="w-[260px] h-[62px] md:w-[360px] md:h-[86px] object-contain drop-shadow-[0_0_30px_rgba(0,123,255,0.25)]"
+            />
           </div>
 
           <h1 className="font-montserrat text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight uppercase">

@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare, BadgeCheck, Clock, DollarSign, Layers } from 'lucide-react';
+import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare, BadgeCheck, Clock, DollarSign, Layers, Search, Wrench, Heart } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import MicroDivider from './components/MicroDivider';
 import ConsentBanner from './components/ConsentBanner';
@@ -194,6 +194,53 @@ function App() {
               icon={<Layers className="w-10 h-10" />}
               title="Comprehensive Support Plans"
               description="Complete IT coverage tailored to your business needs and growth plans."
+            />
+          </div>
+        </div>
+      </div>
+
+      <MicroDivider />
+
+      <div className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative section-fade" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-[#0A0A0A]/60 to-[#0A0A0A]/50"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-it-blue/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-it-red/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-5xl mx-auto relative z-10">
+          <h2 className="font-montserrat text-4xl md:text-5xl font-bold text-white text-center mb-6 tracking-tight uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">
+            OUR PROCESS
+          </h2>
+          <div className="flex justify-center mb-16">
+            <GradientDivider />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <div className="absolute top-1/3 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gradient-to-r from-it-blue to-it-red to-transparent hidden md:block transform -translate-y-1/2 z-0"></div>
+
+            <TimelineStep
+              number="1"
+              icon={<Search className="w-8 h-8" />}
+              title="Assess"
+              description="We audit your current infrastructure, identify vulnerabilities, and evaluate your IT needs."
+            />
+
+            <div className="hidden md:block absolute top-1/3 left-1/3 w-2 h-2 bg-gradient-to-b from-it-blue to-it-red rounded-full transform -translate-x-1/2 -translate-y-1/2 shadow-[0_0_15px_rgba(0,123,255,0.6),0_0_10px_rgba(199,0,57,0.4)] z-10"></div>
+
+            <TimelineStep
+              number="2"
+              icon={<Wrench className="w-8 h-8" />}
+              title="Implement"
+              description="Deploy tailored solutions, optimize systems, and ensure seamless integration with your workflow."
+            />
+
+            <div className="hidden md:block absolute top-1/3 right-1/3 w-2 h-2 bg-gradient-to-b from-it-blue to-it-red rounded-full transform translate-x-1/2 -translate-y-1/2 shadow-[0_0_15px_rgba(0,123,255,0.6),0_0_10px_rgba(199,0,57,0.4)] z-10"></div>
+
+            <TimelineStep
+              number="3"
+              icon={<Heart className="w-8 h-8" />}
+              title="Maintain"
+              description="Continuous monitoring, proactive maintenance, and 24/7 support to keep systems running smoothly."
             />
           </div>
         </div>
@@ -417,6 +464,27 @@ function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNod
           {description}
         </p>
       </div>
+    </div>
+  );
+}
+
+function TimelineStep({ number, icon, title, description }: { number: string; icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="relative flex flex-col items-center z-10">
+      <div className="mb-6 relative">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-it-blue/40 to-it-red/40 border-2 border-gradient-to-b from-it-blue to-it-red flex items-center justify-center shadow-[0_0_30px_rgba(0,123,255,0.4),0_0_20px_rgba(199,0,57,0.3)]">
+          <div className="text-it-blue text-xl font-bold font-montserrat">{number}</div>
+        </div>
+        <div className="absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-b from-it-blue to-it-red opacity-10 blur-md"></div>
+      </div>
+
+      <h3 className="font-montserrat text-2xl font-bold text-white mb-2 tracking-tight uppercase">
+        {title}
+      </h3>
+
+      <p className="font-montserrat text-it-silver text-center text-sm md:text-base leading-relaxed font-medium">
+        {description}
+      </p>
     </div>
   );
 }

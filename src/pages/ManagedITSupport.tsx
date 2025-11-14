@@ -1,5 +1,5 @@
 import { ArrowRight, AlertTriangle, Clock, DollarSign, Shield, Zap, CheckCircle, TrendingUp, Phone, Mail, Headphones, Eye } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MicroDivider from '../components/MicroDivider';
 import logoNavbar from '../img/logo-navbar.png';
 
@@ -258,14 +258,14 @@ function QuoteForm() {
 export default function ManagedITSupport() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
     <div className="w-full">

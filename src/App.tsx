@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare } from 'lucide-react';
+import { ArrowRight, Shield, Headphones, Cpu, Lock, Cloud, Server, Users, Zap, Award, Expand, Phone, Mail, Globe, MessageSquare, BadgeCheck, Clock, DollarSign, Layers } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import MicroDivider from './components/MicroDivider';
 import ConsentBanner from './components/ConsentBanner';
@@ -162,6 +162,40 @@ function App() {
           <p className="font-montserrat text-it-silver text-base md:text-lg max-w-3xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             We deliver innovative, reliable, and efficient IT support for businesses of all sizes.
           </p>
+        </div>
+      </div>
+
+      <MicroDivider />
+
+      <div className="w-full bg-cover bg-center bg-no-repeat py-20 px-6 relative section-fade" style={{backgroundImage: 'url(/src/img/services-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-[#0A0A0A]/60 to-[#0A0A0A]/50"></div>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-it-blue/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-it-red/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ValueCard
+              icon={<BadgeCheck className="w-10 h-10" />}
+              title="Certified Technicians"
+              description="Industry-certified experts delivering professional IT solutions you can trust."
+            />
+            <ValueCard
+              icon={<Clock className="w-10 h-10" />}
+              title="Fast Response Times"
+              description="Rapid support when you need it most, minimizing downtime and disruption."
+            />
+            <ValueCard
+              icon={<DollarSign className="w-10 h-10" />}
+              title="Predictable Monthly Pricing"
+              description="Transparent, flat-rate packages with no hidden fees or surprise costs."
+            />
+            <ValueCard
+              icon={<Layers className="w-10 h-10" />}
+              title="Comprehensive Support Plans"
+              description="Complete IT coverage tailored to your business needs and growth plans."
+            />
+          </div>
         </div>
       </div>
 
@@ -380,6 +414,32 @@ function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNod
         </h3>
 
         <p className="font-montserrat text-it-silver leading-relaxed text-base font-medium drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ValueCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <div className="group relative bg-[#0A0A0A]/95 backdrop-blur-sm border border-it-blue/40 rounded-xl p-6 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.4)] hover:shadow-[0_0_40px_rgba(0,123,255,0.6),0_0_30px_rgba(199,0,57,0.4)] hover:border-it-red/60 overflow-hidden transform hover:-translate-y-2">
+      <div className="absolute inset-0 bg-gradient-to-br from-it-blue/0 via-transparent to-it-blue/0 group-hover:from-it-blue/20 group-hover:via-it-red/10 group-hover:to-it-red/15 transition-all duration-500"></div>
+
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute inset-0 bg-gradient-to-br from-it-blue/10 to-it-red/10"></div>
+      </div>
+
+      <div className="relative z-10 text-center">
+        <div className="mb-4 inline-flex items-center justify-center p-4 bg-gradient-to-br from-it-blue/30 to-it-red/20 rounded-full group-hover:shadow-[0_0_30px_rgba(0,123,255,0.6),0_0_20px_rgba(199,0,57,0.4)] transition-all duration-500 text-it-blue group-hover:text-it-red drop-shadow-[0_0_15px_rgba(0,123,255,0.4)]">
+          {icon}
+        </div>
+
+        <h3 className="font-montserrat text-lg font-bold text-white mb-2 tracking-tight uppercase">
+          {title}
+        </h3>
+
+        <p className="font-montserrat text-it-silver text-sm leading-relaxed font-medium group-hover:text-white transition-colors duration-300">
           {description}
         </p>
       </div>
